@@ -1,0 +1,22 @@
+{
+  "Name": "Archer",
+  "Flavor": "Plainish ranged unit.",
+  "Description": "This boi has a curvy stick. Look at it. It shoots angry baby sticks.",
+  "Move Points": 0,
+  "Dodge Chance": 0,
+  "Defense": 0,
+  "Health": 0,
+  "Armor Type": {
+    "Physical": 0,
+    "Magical": 0
+  },
+  "Attacks": [
+    {
+      "Attack Name": "Shortbow",
+      "Attack Description": "A ranged attack where the archer in question attempts to make the target into a porcupine, one spike at a time.",
+      "Attack Type": null,
+      "Attack Range": 0,
+      "Damage": 0
+    }
+  ]
+}

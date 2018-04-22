@@ -1,6 +1,6 @@
 {
   "Name": "Footsoldier",
-  "Flavor": "Plain melee unit.",
+  "Flavor": "Plainish melee unit.",
   "Description": "The white bread of the Plainish Army. Cheap and unremarkable.",
   "Move Points": 0,
   "Dodge Chance": 0,
@@ -12,7 +12,7 @@
   },
   "Attacks": [
     {
-      "Attack Name": "Slash",
+      "Attack Name": "Shortsword",
       "Attack Description": "A regulation standard sword strike. Temper your expectations.",
       "Attack Type": null,
       "Attack Range": 0,
