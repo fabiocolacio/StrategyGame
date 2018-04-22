@@ -1,0 +1,22 @@
+{
+  "Name": "Blackguard",
+  "Flavor": "Elite Undead warrior.",
+  "Description": "The big boi of the living dead. Uses his intimidating girth to destroy anyone foolish enough to get in his way. His mother thought it was just a phase.",
+  "Move Points": 0,
+  "Dodge Chance": 0,
+  "Defense": 0,
+  "Health": 0,
+  "Armor Type": {
+    "Physical": 0,
+    "Magical": 0
+  },
+  "Attacks": [
+    {
+      "Attack Name": "Deathblade",
+      "Attack Description": "A terrible blow from a terrible weapon. Just looking at a blackguard's sword inspires raw terror, so you can probably imagie how much psychological damage actually getting hit by the thing does.",
+      "Attack Type": null,
+      "Attack Range": 0,
+      "Damage": 0
+    }
+  ]
+}

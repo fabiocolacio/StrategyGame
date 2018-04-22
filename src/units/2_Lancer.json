@@ -1,0 +1,22 @@
+{
+  "Name": "Lancer",
+  "Flavor": "Plainish cavalry.",
+  "Description": "A man on a horse. Remember kids, if you're having problems catching up to your enemies, use Mother Nature to cheat.",
+  "Move Points": 0,
+  "Dodge Chance": 0,
+  "Defense": 0,
+  "Health": 0,
+  "Armor Type": {
+    "Physical": 0,
+    "Magical": 0
+  },
+  "Attacks": [
+    {
+      "Attack Name": "Lance",
+      "Attack Description": "A good, solid jab with a good, solid poke stick. Normally, the speed of the horse would be fully utilized to improve the momentum of the attack, but we're trying to make something easy code here.",
+      "Attack Type": null,
+      "Attack Range": 0,
+      "Damage": 0
+    }
+  ]
+}

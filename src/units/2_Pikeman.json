@@ -1,0 +1,22 @@
+{
+  "Name": "Pikeman",
+  "Flavor": "Plainish spear unit.",
+  "Description": "More defense-oriented than your average footsoldier. ",
+  "Move Points": 0,
+  "Dodge Chance": 0,
+  "Defense": 0,
+  "Health": 0,
+  "Armor Type": {
+    "Physical": 0,
+    "Magical": 0
+  },
+  "Attacks": [
+    {
+      "Attack Name": "Pike",
+      "Attack Description": "A stab that takes full advantage of the pike's weight and length. If the enemy is wearing plate, it'll come off more like someone poking a metal person with a really long stick.",
+      "Attack Type": null,
+      "Attack Range": 0,
+      "Damage": 0
+    }
+  ]
+}
