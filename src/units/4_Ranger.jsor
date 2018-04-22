@@ -1,0 +1,22 @@
+{
+  "Name": "Ranger",
+  "Flavor": "Elite Melven ranged unit.",
+  "Description": "Most people don't know that Rangers exist. Of course, this is mostly because outsiders are rather poor at distinguishing between Melves on the field, but it's a cool idea if you don't think about it.",
+  "Move Points": 0,
+  "Dodge Chance": 0,
+  "Defense": 0,
+  "Health": 0,
+  "Armor Type": {
+    "Physical": 0,
+    "Magical": 0
+  },
+  "Attacks": [
+    {
+      "Attack Name": "Truewood Bow",
+      "Attack Description": "A hand grown, 100% natural, arrow fed bow. No additives necessary.",
+      "Attack Type": null,
+      "Attack Range": 0,
+      "Damage": 0
+    }
+  ]
+}
