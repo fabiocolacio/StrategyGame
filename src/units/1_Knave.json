@@ -13,7 +13,7 @@
   "Attacks": [
     {
       "Attack Name": "Slash",
-      "Attack Description": "A shambling slash, simple and effective. The arm of the Knave doing the slashing may or may not detach in the process.",
+      "Attack Description": "A shambling slash, simple and effective. The arm of the Knave doing the slashing may or may not detach in the process. Does a decent amount of damage.",
       "Attack Type": null,
       "Attack Range": 0,
       "Damage": 0

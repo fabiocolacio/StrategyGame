@@ -13,7 +13,7 @@
   "Attacks": [
     {
       "Attack Name": "Spit",
-      "Attack Description": "The Pariah hawks a mean, magical loogie at its target. Burns flesh and ruins clothes.",
+      "Attack Description": "The Pariah hawks a mean, magical loogie at its target. Burns flesh and ruins clothes. Deals light magical damage.",
       "Attack Type": null,
       "Attack Range": 0,
       "Damage": 0
