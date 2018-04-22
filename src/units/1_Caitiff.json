@@ -1,0 +1,22 @@
+{
+  "Name": "Caitiff",
+  "Flavor": "Magic unit, uses necromancy.",
+  "Description": "A necessary component of any Undead force, and the main reason why the living dead are feared. Makes friends by turning the living straight into undead, instead of waiting for them to die like a proper supervillain.",
+  "Move Points": 0,
+  "Dodge Chance": 0,
+  "Defense": 0,
+  "Health": 0,
+  "Armor Type": {
+    "Physical": 0,
+    "Magical": 0
+  },
+  "Attacks": [
+    {
+      "Attack Name": "Deadbolt",
+      "Attack Description": "A bolt of raw necrotic energy, which directly targets the life force of the stricken being. May cause fever, necrosis, fatigue, inappropriate thoughts, and death.",
+      "Attack Type": null,
+      "Attack Range": 0,
+      "Damage": 0
+    }
+  ]
+}
