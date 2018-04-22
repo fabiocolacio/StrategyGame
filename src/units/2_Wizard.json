@@ -1,7 +1,7 @@
 {
   "Name": "Wizard",
   "Flavor": "Plainish magic unit.",
-  "Description": ""A scholar that decided shooting lightning from his fingertips was more fun than reading books in a tower. Dangerous and mysterious until you find out they're just zappy nerds.",
+  "Description": "A scholar that decided shooting lightning from his fingertips was more fun than reading books in a tower. Dangerous and mysterious until you find out they're just zappy nerds.",
   "Move Points": 0,
   "Dodge Chance": 0,
   "Defense": 0,
