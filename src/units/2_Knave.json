@@ -1,0 +1,22 @@
+{
+  "Name": "Knave",
+  "Flavor": "Armored Undead melee.",
+  "Description": "A soldier, called back to war. Has a little bit of metal to keep him decent, for what little that matters. Forms the backbone of a proper undead army.",
+  "Move Points": 3,
+  "Dodge Chance": 0,
+  "Cost": 20,
+  "Health": 5,
+  "Armor Type": {
+    "Physical": 1,
+    "Magical": 0
+  },
+  "Attacks": [
+    {
+      "Attack Name": "Slash",
+      "Attack Description": "A shambling slash, simple and effective. The arm of the Knave doing the slashing may or may not detach in the process.",
+      "Attack Type": null,
+      "Attack Range": 0,
+      "Damage": 0
+    }
+  ]
+}
