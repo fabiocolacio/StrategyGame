@@ -1,11 +1,6 @@
 const GAME = new Object ();
 
-GAME.init = function () {
-    GAME.mousePosition = {
-      x: -1,
-      y: -1
-    };
-    GAME.TITLE = "Fabio's Nights";
+GAME.init = function () {  
     GAME.WIDTH = 320;
     GAME.HEIGHT = 240;
     GAME.RATIO = GAME.WIDTH / GAME.HEIGHT;
@@ -14,7 +9,16 @@ GAME.init = function () {
     GAME.CANVAS.width = GAME.WIDTH;
     GAME.CANVAS.height = GAME.HEIGHT;
     GAME.CTX = GAME.CANVAS.getContext ('2d');
+    GAME.pixelSize = 1;
     GAME.resize ();
+
+
+    GAME.mousePosition = {
+      x: -1,
+      y: -1
+    };
+
+    GAME.TITLE = "Fabio's Nights";
 
     GAME.currentState = new GAME.MainMenuState ();
     GAME.interval = setInterval (GAME.update, 20);
@@ -42,14 +46,16 @@ GAME.resize = function () {
         GAME.CANVAS.style.top = topMargin + 'px';
     }
 
+    GAME.pixelSize = GAME.currentWidth / GAME.WIDTH;
+
     GAME.CANVAS.style.width = GAME.currentWidth + 'px';
     GAME.CANVAS.style.height = GAME.currentHeight + 'px';
 };
 
 GAME.mousemoved = function (e) {
     GAME.mousePosition = {
-      x: e.pageX - GAME.CANVAS.offsetLeft,
-      y: e.pageY + GAME.CANVAS.offsetTop
+      x: (e.pageX - GAME.CANVAS.offsetLeft) / GAME.pixelSize,
+      y: (e.pageY - GAME.CANVAS.offsetTop) / GAME.pixelSize
     };
 };
 
