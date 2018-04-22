@@ -10,7 +10,14 @@ GAME.init = function () {
     GAME.CANVAS.height = GAME.HEIGHT;
     GAME.CTX = GAME.CANVAS.getContext ('2d');
     GAME.resize ();
+
+    GAME.currentState = new GAME.MainMenuState ();
+    GAME.interval = setInterval (GAME.update, 20);
 };
+
+GAME.update = function () {
+    GAME.currentState.update ();
+}
 
 GAME.resize = function () {
     const winHeight = window.innerHeight;
@@ -33,8 +40,6 @@ GAME.resize = function () {
     GAME.CANVAS.style.width = GAME.currentWidth + 'px';
     GAME.CANVAS.style.height = GAME.currentHeight + 'px';
 };
-
-console.log ();
 
 window.addEventListener ('load', GAME.init, false);
 window.addEventListener ('resize', GAME.resize, false);
