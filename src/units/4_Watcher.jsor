@@ -1,0 +1,22 @@
+{
+  "Name": "Watcher",
+  "Flavor": "Melven ranged unit.",
+  "Description": "One of the more annoying Melfs to fight against. Just when you close in, he just prances away another half mile and makes indecent comments about your sister.",
+  "Move Points": 0,
+  "Dodge Chance": 0,
+  "Defense": 0,
+  "Health": 0,
+  "Armor Type": {
+    "Physical": 0,
+    "Magical": 0
+  },
+  "Attacks": [
+    {
+      "Attack Name": "Recurve Bow",
+      "Attack Description": "Archery is utilized by mankind, but the Melves had it first. The average Melven Watcher can put a shot between the eyes of a fly while upside down from a hundred feet away. That is an entirely legitimate and highly provable fact.",
+      "Attack Type": null,
+      "Attack Range": 0,
+      "Damage": 0
+    }
+  ]
+}
