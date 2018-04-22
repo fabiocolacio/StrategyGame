@@ -1,0 +1,22 @@
+{
+  "Name": "Wretch",
+  "Flavor": "Basic Undead melee unit.",
+  "Description": "Foul, fragile, and foolish. Wretches use dirt-crusted claws to tear at the flesh of the living. While relatively weak individually, even the truly pathetic can kill in numbers.",
+  "Move Points": 3,
+  "Dodge Chance": 0,
+  "Defense": 0,
+  "Health": 4,
+  "Armor Type": {
+    "Physical": 0,
+    "Magical": 0
+  },
+  "Attacks": [
+    {
+      "Attack Name": "Lunge",
+      "Attack Description": "The Wretch strikes with its claws, in a fashion even its limited control will allow.",
+      "Attack Type": null,
+      "Attack Range": 1,
+      "Damage": 2
+    }
+  ]
+}
