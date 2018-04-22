@@ -1,0 +1,22 @@
+{
+  "Name": "Ronion",
+  "Flavor": "Undead defensive unit.",
+  "Description": "A sad, sad creature covered in a malignant growth. Sits in one spot like a rotten potato in order to defend its allies.",
+  "Move Points": 0,
+  "Dodge Chance": 0,
+  "Defense": 0,
+  "Health": 0,
+  "Armor Type": {
+    "Physical": 0,
+    "Magical": 0
+  },
+  "Attacks": [
+    {
+      "Attack Name": "Sit",
+      "Attack Description": "I don't really know what you expect, considering that this thing is barely aware that it exists, let alone that it needs to fight.",
+      "Attack Type": null,
+      "Attack Range": 0,
+      "Damage": 0
+    }
+  ]
+}
