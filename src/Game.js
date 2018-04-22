@@ -1,6 +1,10 @@
 const GAME = new Object ();
 
 GAME.init = function () {
+    GAME.mousePosition = {
+      x: -1,
+      y: -1
+    };
     GAME.TITLE = "Fabio's Nights";
     GAME.WIDTH = 320;
     GAME.HEIGHT = 240;
@@ -44,8 +48,8 @@ GAME.resize = function () {
 
 GAME.mousemoved = function (e) {
     GAME.mousePosition = {
-      x: e.pageX,
-      y: e.pageY
+      x: e.pageX - GAME.CANVAS.offsetLeft,
+      y: e.pageY + GAME.CANVAS.offsetTop
     };
 };
 
