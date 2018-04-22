@@ -12,8 +12,8 @@
   },
   "Attacks": [
     {
-      "Attack Name": "Lunge",
-      "Attack Description": "The Wretch strikes with its claws, in a fashion even its limited control will allow. Does light damage.",
+      "Attack Name": "Ragged Claws",
+      "Attack Description": "The Wretch strikes with its claws, in a fashion even its limited control will allow.",
       "Attack Type": null,
       "Attack Range": 1,
       "Damage": 2
