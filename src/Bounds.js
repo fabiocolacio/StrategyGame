@@ -1,3 +1,0 @@
-GAME.Rect = class {
-
-};
