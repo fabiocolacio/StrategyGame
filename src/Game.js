@@ -42,5 +42,13 @@ GAME.resize = function () {
     GAME.CANVAS.style.height = GAME.currentHeight + 'px';
 };
 
-window.addEventListener ('load', GAME.init, false);
-window.addEventListener ('resize', GAME.resize, false);
+GAME.mousemoved = function (e) {
+    GAME.mousePosition = {
+      x: e.pageX,
+      y: e.pageY
+    };
+};
+
+window.addEventListener ('load', GAME.init);
+window.addEventListener ('resize', GAME.resize);
+document.addEventListener('mousemove', GAME.mousemoved);

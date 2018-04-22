@@ -29,6 +29,6 @@ GAME.MainMenuState = class {
             GAME.CTX.fillText (this.entries[i].text, 0, 100 + (i * 25));
         }
 
-        console.log ("This is the main menu state");
+
     }
 };
