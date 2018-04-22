@@ -1,6 +1,6 @@
 const GAME = new Object ();
 
-GAME.init = function () {  
+GAME.init = function () {
     GAME.WIDTH = 320;
     GAME.HEIGHT = 240;
     GAME.RATIO = GAME.WIDTH / GAME.HEIGHT;
@@ -59,6 +59,11 @@ GAME.mousemoved = function (e) {
     };
 };
 
+GAME.mouseclicked = function (e) {
+    GAME.currentState.mouseClicked(e);
+}
+
 window.addEventListener ('load', GAME.init);
 window.addEventListener ('resize', GAME.resize);
 document.addEventListener('mousemove', GAME.mousemoved);
+document.addEventListener('click', GAME.mouseclicked);

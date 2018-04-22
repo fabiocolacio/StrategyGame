@@ -6,6 +6,7 @@ GAME.MainMenuState = class {
             {
                 text: "Play",
                 action: function () {
+                    GAME.currentState = new GAME.GameState();
                     console.log ("You clicked on the play button");
                 }
             },
@@ -25,6 +26,17 @@ GAME.MainMenuState = class {
         }
     }
 
+    mouseClicked (e) {
+
+        for (let i = 0; i < this.entries.length; i++){
+            let entry = this.entries[i];
+
+            if (entry.rect.contains(GAME.mousePosition.x, GAME.mousePosition.y)) {
+                entry.action();
+            }
+        }
+    }
+
     update () {
         GAME.CTX.fillStyle = 'pink';
         GAME.CTX.fillRect (0, 0, GAME.WIDTH, GAME.HEIGHT);
@@ -34,13 +46,13 @@ GAME.MainMenuState = class {
         GAME.CTX.textAlign = "center";
         GAME.CTX.fillText (GAME.TITLE, GAME.WIDTH / 2 , 50);
         GAME.CTX.textAlign = "start";
-        
+
         for (let i = 0; i < this.entries.length; i++) {
             let entry = this.entries[i];
-            
+
             if (entry.rect.contains(GAME.mousePosition.x, GAME.mousePosition.y)) {
               GAME.CTX.fillStyle = 'yellow';
-              console.log ('cursor with coords (%d, %d) is inside of entry[%d] with (%d, %d, %d, %d)', GAME.mousePosition.x, GAME.mousePosition.y, i, entry.rect.left, entry.rect.top, entry.rect.right, entry.rect.bottom);
+              //console.log ('cursor with coords (%d, %d) is inside of entry[%d] with (%d, %d, %d, %d)', GAME.mousePosition.x, GAME.mousePosition.y, i, entry.rect.left, entry.rect.top, entry.rect.right, entry.rect.bottom);
             }
             else {
               GAME.CTX.fillStyle = 'black';
