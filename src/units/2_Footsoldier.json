@@ -1,6 +1,6 @@
 {
   "Name": "Footsoldier",
-  "Flavor": "Plain melee unit.",
+  "Flavor": "Plainish melee unit.",
   "Description": "The white bread of the Plainish Army. Cheap and unremarkable.",
   "Move Points": 0,
   "Dodge Chance": 0,
