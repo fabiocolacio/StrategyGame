@@ -1,0 +1,22 @@
+{
+  "Name": "Crusader",
+  "Flavor": "Empire melee unit.",
+  "Description": "You can tell the Empire is crazy rich because their basic footsoldiers have decent armor on.",
+  "Move Points": 0,
+  "Dodge Chance": 0,
+  "Defense": 0,
+  "Health": 0,
+  "Armor Type": {
+    "Physical": 0,
+    "Magical": 0
+  },
+  "Attacks": [
+    {
+      "Attack Name": "Broadsword",
+      "Attack Description": "A righteous blow, backed by perceived justice. Or greed. Or bloodlust. Could be anything, to be honest.",
+      "Attack Type": null,
+      "Attack Range": 0,
+      "Damage": 0
+    }
+  ]
+}

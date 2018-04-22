@@ -1,0 +1,22 @@
+{
+  "Name": "Paladin",
+  "Flavor": "Empire defensive unit.",
+  "Description": "A large, fully armored unit with a big shield for you to break your hopes and dreams against. Built like a rock that bullies other rocks.",
+  "Move Points": 0,
+  "Dodge Chance": 0,
+  "Defense": 0,
+  "Health": 0,
+  "Armor Type": {
+    "Physical": 0,
+    "Magical": 0
+  },
+  "Attacks": [
+    {
+      "Attack Name": "Tower Shield",
+      "Attack Description": "Hitting someone with a sword doesn't have the same cinematic impact that smacking someone's entire body with a door-sized dinner plate does.",
+      "Attack Type": null,
+      "Attack Range": 0,
+      "Damage": 0
+    }
+  ]
+}

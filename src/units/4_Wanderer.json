@@ -1,0 +1,22 @@
+{
+  "Name": "Wanderer",
+  "Flavor": "Elite Melven melee unit.",
+  "Description": "A fast, dangerous Melf with a wicked sharp blade. Epic tales are written about them, which has the unfortunate side effect of attracting an aggressive fanbase.",
+  "Move Points": 0,
+  "Dodge Chance": 0,
+  "Defense": 0,
+  "Health": 0,
+  "Armor Type": {
+    "Physical": 0,
+    "Magical": 0
+  },
+  "Attacks": [
+    {
+      "Attack Name": "Katana",
+      "Attack Description": "Glorious Melven hardwood. Folded a few times. Cuts like a bolt of lightning through the night sky.",
+      "Attack Type": null,
+      "Attack Range": 0,
+      "Damage": 0
+    }
+  ]
+}

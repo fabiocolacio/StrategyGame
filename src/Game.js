@@ -9,7 +9,16 @@ GAME.init = function () {
     GAME.CANVAS.width = GAME.WIDTH;
     GAME.CANVAS.height = GAME.HEIGHT;
     GAME.CTX = GAME.CANVAS.getContext ('2d');
+    GAME.pixelSize = 1;
     GAME.resize ();
+
+
+    GAME.mousePosition = {
+      x: -1,
+      y: -1
+    };
+
+    GAME.TITLE = "Fabio's Nights";
 
     GAME.currentState = new GAME.MainMenuState ();
     GAME.interval = setInterval (GAME.update, 20);
@@ -37,9 +46,24 @@ GAME.resize = function () {
         GAME.CANVAS.style.top = topMargin + 'px';
     }
 
+    GAME.pixelSize = GAME.currentWidth / GAME.WIDTH;
+
     GAME.CANVAS.style.width = GAME.currentWidth + 'px';
     GAME.CANVAS.style.height = GAME.currentHeight + 'px';
 };
 
-window.addEventListener ('load', GAME.init, false);
-window.addEventListener ('resize', GAME.resize, false);
+GAME.mousemoved = function (e) {
+    GAME.mousePosition = {
+      x: (e.pageX - GAME.CANVAS.offsetLeft) / GAME.pixelSize,
+      y: (e.pageY - GAME.CANVAS.offsetTop) / GAME.pixelSize
+    };
+};
+
+GAME.mouseclicked = function (e) {
+    GAME.currentState.mouseClicked(e);
+}
+
+window.addEventListener ('load', GAME.init);
+window.addEventListener ('resize', GAME.resize);
+document.addEventListener('mousemove', GAME.mousemoved);
+document.addEventListener('click', GAME.mouseclicked);
