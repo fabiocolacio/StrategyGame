@@ -1,6 +1,7 @@
 const GAME = new Object ();
 
 GAME.init = function () {
+    GAME.TITLE = "Fabio's Nights";
     GAME.WIDTH = 320;
     GAME.HEIGHT = 240;
     GAME.RATIO = GAME.WIDTH / GAME.HEIGHT;
