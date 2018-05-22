@@ -2,8 +2,8 @@ import java.awt.Graphics2D;
 import java.awt.Font;
 import java.awt.Color;
 
-public class MainMenuState implements GameState {
-    public MainMenuState () {
+public class MainMenu implements GameState {
+    public MainMenu () {
 
     }
 

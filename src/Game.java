@@ -23,7 +23,7 @@ public class Game extends JFrame implements MouseListener, KeyListener {
         setVisible (true);
         setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
 
-        setState (new MainMenuState ());
+        setState (new MainMenu ());
     }
 
     public void setState (GameState state) {
