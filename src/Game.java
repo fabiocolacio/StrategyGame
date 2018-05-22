@@ -5,8 +5,10 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.KeyEvent;
 
-public class Game extends JFrame implements MouseListener {
+public class Game extends JFrame implements MouseListener, KeyListener {
     public static final String NAME = "Strategy Game";
 
     private GameState currentState;
@@ -14,6 +16,7 @@ public class Game extends JFrame implements MouseListener {
 
     public Game () {
         addMouseListener (this);
+        addKeyListener (this);
         setSize (new Dimension (500, 300));
         setTitle (NAME);
         setResizable (false);
@@ -73,6 +76,21 @@ public class Game extends JFrame implements MouseListener {
 
     @Override
     public void mouseExited (MouseEvent e) {
+
+    }
+
+    @Override
+    public void keyTyped (KeyEvent e) {
+    
+    }
+
+    @Override
+    public void keyPressed (KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyReleased (KeyEvent e) {
 
     }
     
