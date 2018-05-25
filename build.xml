@@ -14,7 +14,7 @@
         </javac>
     </target>
 
-    <target name="jar">
+    <target name="jar" depends="build">
         <mkdir dir="build/jar"/>
         <jar destfile="${jar.dir}/${name}.jar" basedir="${classes.dir}">
             <manifest>
@@ -23,7 +23,7 @@
         </jar>
     </target>
 
-    <target name="run">
+    <target name="run" depends="jar">
         <java jar="${jar.dir}/${name}.jar" fork="true"/>
     </target>
 </project>
