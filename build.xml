@@ -7,10 +7,23 @@
     </target>
 
     <target name="build" depends="clean">
-        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${classes.dir}"/>
 
-        <javac destdir="${build.dir}">
+        <javac destdir="${classes.dir}">
             <src path="${src.dir}"/>
         </javac>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="build/jar"/>
+        <jar destfile="${jar.dir}/${name}.jar" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${mainclass}"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run">
+        <java jar="${jar.dir}/${name}.jar" fork="true"/>
     </target>
 </project>
