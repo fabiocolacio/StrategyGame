@@ -17,20 +17,22 @@ public class Game extends JFrame implements MouseListener, KeyListener, MouseMot
     public static boolean rmbDown;
 
     private GameState currentState;
-    private boolean renderFlag;
+    private volatile boolean renderFlag;
+    private JFrame window;
 
 
     public Game () {
-        addMouseListener (this);
-        addKeyListener (this);
-        addMouseMotionListener(this);
-        setSize (new Dimension (500, 300));
-        setTitle (NAME);
-        setResizable (false);
-        setVisible (true);
-        setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+        window = new JFrame ();
+        window.addMouseListener (this);
+        window.addKeyListener (this);
+        window.addMouseMotionListener(this);
+        window.setSize (new Dimension (500, 300));
+        window.setTitle (NAME);
+        window.setResizable (false);
+        window.setVisible (true);
+        window.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
 
-        setState (new MainMenu ());
+        setState (new MainMenu (this));
     }
 
     public void setState (GameState state) {
@@ -39,31 +41,34 @@ public class Game extends JFrame implements MouseListener, KeyListener, MouseMot
     }
 
     public void update () {
-        currentState.update (this);
+        currentState.update ();
 
         if (renderFlag) {
-            repaint ();
+            render (window.getGraphics ());
             renderFlag = false;
         }
+    }
+
+    public JFrame getWindow () {
+        return window;
     }
 
     public void queueRender () {
         renderFlag = true;
     }
 
-    @Override
-    public void paint (Graphics g) {
+    public void render (Graphics g) {
         Graphics2D graphics = (Graphics2D) g;
 
         graphics.setColor (Color.RED);
-        graphics.fillRect (0, 0, getWidth (), getHeight ());
+        graphics.fillRect (0, 0, window.getWidth (), window.getHeight ());
 
         currentState.render (graphics);
     }
 
     @Override
     public void mouseClicked (MouseEvent e) {
-
+        currentState.mouseClicked (e);
     }
 
     @Override
@@ -73,6 +78,8 @@ public class Game extends JFrame implements MouseListener, KeyListener, MouseMot
 
         if (e.getButton() == 2)
             rmbDown = true;
+
+        currentState.mousePressed (e);
     }
 
     @Override
@@ -82,39 +89,49 @@ public class Game extends JFrame implements MouseListener, KeyListener, MouseMot
 
         if (e.getButton() == 2)
             rmbDown = false;
+
+        currentState.mouseReleased (e);
     }
+
+    @Override
     public void mouseDragged(MouseEvent e) {
         mouseX = e.getX();
         mouseY = e.getY();
+
+        currentState.mouseDragged (e);
     }
+
+    @Override
     public void mouseMoved(MouseEvent e) {
         mouseX = e.getX();
         mouseY = e. getY();
+
+        currentState.mouseMoved (e);
     }
 
     @Override
     public void mouseEntered (MouseEvent e) {
-
+        currentState.mouseEntered (e);
     }
 
     @Override
     public void mouseExited (MouseEvent e) {
-
+        currentState.mouseExited (e);
     }
 
     @Override
     public void keyTyped (KeyEvent e) {
-
+        currentState.keyTyped (e);
     }
 
     @Override
     public void keyPressed (KeyEvent e) {
-
+        currentState.keyPressed (e);
     }
 
     @Override
     public void keyReleased (KeyEvent e) {
-
+        currentState.keyReleased (e);
     }
 
     public static void main (String[] args) {
