@@ -16,23 +16,34 @@ public class Game extends JFrame implements MouseListener, KeyListener, MouseMot
     public static boolean lmbDown;
     public static boolean rmbDown;
 
+    private Dimension gameSize = new Dimension (500, 300);
+    private int scaleFactor = 2;
+
     private GameState currentState;
     private volatile boolean renderFlag;
     private JFrame window;
-
+    private Dimension windowSize;
 
     public Game () {
         window = new JFrame ();
         window.addMouseListener (this);
         window.addKeyListener (this);
         window.addMouseMotionListener(this);
-        window.setSize (new Dimension (500, 300));
         window.setTitle (NAME);
         window.setResizable (false);
         window.setVisible (true);
         window.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+        updateWindowSize ();
 
         setState (new MainMenu (this));
+    }
+
+    private void updateWindowSize () {
+        windowSize = new Dimension (
+            (int) (gameSize.getWidth () * scaleFactor),
+            (int) (gameSize.getHeight () * scaleFactor));
+        window.setSize (windowSize);
+        queueRender ();  
     }
 
     public void setState (GameState state) {
@@ -59,6 +70,7 @@ public class Game extends JFrame implements MouseListener, KeyListener, MouseMot
 
     public void render (Graphics g) {
         Graphics2D graphics = (Graphics2D) g;
+        graphics.scale (scaleFactor, scaleFactor);
 
         graphics.setColor (Color.RED);
         graphics.fillRect (0, 0, window.getWidth (), window.getHeight ());
@@ -68,11 +80,19 @@ public class Game extends JFrame implements MouseListener, KeyListener, MouseMot
 
     @Override
     public void mouseClicked (MouseEvent e) {
+        e.translatePoint (
+            (e.getX () / scaleFactor) - e.getX (),
+            (e.getY () / scaleFactor) - e.getY ());
+
         currentState.mouseClicked (e);
     }
 
     @Override
     public void mousePressed (MouseEvent e) {
+        e.translatePoint (
+            (e.getX () / scaleFactor) - e.getX (),
+            (e.getY () / scaleFactor) - e.getY ());
+
         if (e.getButton() == 1)
             lmbDown = true;
 
@@ -84,6 +104,10 @@ public class Game extends JFrame implements MouseListener, KeyListener, MouseMot
 
     @Override
     public void mouseReleased (MouseEvent e) {
+        e.translatePoint (
+            (e.getX () / scaleFactor) - e.getX (),
+            (e.getY () / scaleFactor) - e.getY ());
+
         if (e.getButton() == 1)
             lmbDown = false;
 
@@ -95,6 +119,10 @@ public class Game extends JFrame implements MouseListener, KeyListener, MouseMot
 
     @Override
     public void mouseDragged(MouseEvent e) {
+        e.translatePoint (
+            (e.getX () / scaleFactor) - e.getX (),
+            (e.getY () / scaleFactor) - e.getY ());
+
         mouseX = e.getX();
         mouseY = e.getY();
 
@@ -103,6 +131,10 @@ public class Game extends JFrame implements MouseListener, KeyListener, MouseMot
 
     @Override
     public void mouseMoved(MouseEvent e) {
+        e.translatePoint (
+            (e.getX () / scaleFactor) - e.getX (),
+            (e.getY () / scaleFactor) - e.getY ());
+
         mouseX = e.getX();
         mouseY = e. getY();
 
@@ -111,11 +143,19 @@ public class Game extends JFrame implements MouseListener, KeyListener, MouseMot
 
     @Override
     public void mouseEntered (MouseEvent e) {
+        e.translatePoint (
+            (e.getX () / scaleFactor) - e.getX (),
+            (e.getY () / scaleFactor) - e.getY ());
+
         currentState.mouseEntered (e);
     }
 
     @Override
     public void mouseExited (MouseEvent e) {
+        e.translatePoint (
+            (e.getX () / scaleFactor) - e.getX (),
+            (e.getY () / scaleFactor) - e.getY ());
+
         currentState.mouseExited (e);
     }
 
