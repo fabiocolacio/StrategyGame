@@ -13,7 +13,7 @@
   "Attacks": [
     {
       "Attack Name": "Lance",
-      "Attack Description": "A good, solid jab with a good, solid poke stick. Normally, the speed of the horse would be fully utilized to improve the momentum of the attack, but we're trying to make something easy code here.",
+      "Attack Description": "A good, solid jab with a good, solid poke stick. Normally, the speed of the horse would be fully utilized to improve the momentum of the attack, but we're trying to make something easy to code here.",
       "Attack Type": null,
       "Attack Range": 0,
       "Damage": 0

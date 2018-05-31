@@ -13,7 +13,7 @@
   "Attacks": [
     {
       "Attack Name": "Lightning Bolt",
-      "Attack Description": "The fury of the gods, harnessed by mortal hands. Works best after one announces the name of the spell its intended target.",
+      "Attack Description": "The fury of the gods, harnessed by mortal hands. Works best after one announces the name of the spell to its intended target.",
       "Attack Type": null,
       "Attack Range": 0,
       "Damage": 0
