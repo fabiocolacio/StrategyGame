@@ -3,6 +3,8 @@ import java.awt.Font;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.KeyEvent;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 public class MatchState implements GameState {
     private Game game;
@@ -25,7 +27,7 @@ public class MatchState implements GameState {
 
     @Override
     public void mouseClicked (MouseEvent e) {
-    
+
     }
 
     @Override
@@ -72,4 +74,46 @@ public class MatchState implements GameState {
     public void keyReleased (KeyEvent e) {
 
     }
+    private int[][] loadMap(String fileName) {
+        int rows = 0;
+        int cols = 0;
+        int[][] map = null;
+
+        try (BufferedReader reader = new BufferedReader (new FileReader (fileName))) {
+            {
+                BufferedReader temp = new BufferedReader (new FileReader (fileName));
+                int c;
+
+                do {
+                    c = temp.read();
+                    if (c == '\n') {
+                        rows++;
+                    }
+                    else {
+                        cols++;
+                    }
+                } while (c != -1);
+                    temp.close();
+
+            }
+            map = new int[rows][cols];
+
+            for (int row = 0; row < rows; row++ ) {
+                for (int col = 0; col < cols; col++) {
+                    map[row][col] = reader.read();
+
+                }
+            reader.read();
+            }
+
+        }
+        catch (Exception e) {
+            System.out.printf("Unable to load instance with error: \n%s\n\n", e);
+            System.out.println("Aborting.");
+            System.exit(0);
+
+        }
+        return map;
+    }
+
 }
