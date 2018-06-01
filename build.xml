@@ -20,6 +20,7 @@
             <manifest>
                 <attribute name="Main-Class" value="${mainclass}"/>
             </manifest>
+            <zipfileset dir="${res.dir}"/>
         </jar>
     </target>
 

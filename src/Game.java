@@ -8,6 +8,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseMotionListener;
+import java.io.InputStream;
 
 public class Game extends JFrame implements MouseListener, KeyListener, MouseMotionListener {
     public static final String NAME = "Strategy Game";
@@ -36,6 +37,20 @@ public class Game extends JFrame implements MouseListener, KeyListener, MouseMot
         updateWindowSize ();
 
         setState (new MainMenu (this));
+    }
+
+    /**
+     * Opens a resource within the game's JAR file as an InputStream.
+     * This is syntactic sugar, and is functionally equivalent to calling
+     * ClassLoader.getSystemResourceAsStream ().
+     *
+     * Files outside of the JAR can be opened using usual Java standards.
+     *
+     * @param path The path of the resource to open, relative to the root of the JAR
+     * @return The InputStream of the newly opened file.
+     */
+    public static InputStream openResource (String path) {
+        return ClassLoader.getSystemResourceAsStream (path);
     }
 
     private void updateWindowSize () {

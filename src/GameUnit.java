@@ -19,9 +19,21 @@ public class GameUnit {
     private int attackRange;
     private int attackDamage;
 
-    GameUnit (String name, String flavor, String description, int movePoints, 
-            int dodgeChance, int defense, int health, int armorPhysical, int armorMagical,
-            String attackName, String attackDescription, int attackType, int attackRange, int attackDamage) {
+    GameUnit (String name,
+              String flavor,
+              String description,
+              int movePoints, 
+              int dodgeChance,
+              int defense,
+              int health,
+              int armorPhysical,
+              int armorMagical,
+              String attackName,
+              String attackDescription, 
+              int attackType,
+              int attackRange,
+              int attackDamage)
+    {
 
         this.name = name;
         this.flavor = flavor;
@@ -78,7 +90,5 @@ public class GameUnit {
                 "Attack - Type: \t" + this.attackType + "\n" +
                 "Attack - Range: \t" + this.attackRange + "\n" +
                 "Attack - Damage: \t" + this.attackDamage;
-
     }
-
 }
