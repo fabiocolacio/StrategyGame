@@ -1,2 +1,4 @@
-name = Mountains
-description = The nipples of Earth, hard from the cold temperatures present at high elevations. Very difficult to cross the direct way.
+{
+    "Name": "Mountains",
+    "Description": "The nipples of Earth, hard from the cold temperatures present at high elevations. Very difficult to cross the direct way."
+}

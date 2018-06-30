@@ -1,2 +1,4 @@
-name = Forest
-description = A thick, hard wood, perfect for phallic puns. The forest is the domain of the Melves, and runs rife with life and magic.
+{
+    "Name": "Forest",
+    "Description": "A thick, hard wood, perfect for phallic puns. The forest is the domain of the Melves, and runs rife with life and magic."
+}

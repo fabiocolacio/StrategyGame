@@ -1,2 +1,4 @@
-name = Deadland
-description = Land rendered bare and fetid by the machinations of the undead. "Fetid" means "smelly", by the way. It's because of all the corpses.
+{
+    "Name": "Deadland",
+    "Description": "Land rendered bare and fetid by the machinations of the undead. \"Fetid\" means \"smelly\", by the way. It's because of all the corpses."
+}
